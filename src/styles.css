@@ -107,8 +107,7 @@
   padding: 0.7rem 1.75rem;
   font-size: 0.85rem;
   transition: background-color .3s, color .3s;
-  &:hover { background: currentColor; }
-  &:hover > span { color: var(--band); filter: none; }
+  &:hover { background: color-mix(in oklab, currentColor 14%, transparent); }
 }
 
 @utility arch { border-radius: 9999px 9999px 0 0; }
