@@ -1,5 +1,5 @@
 // ============ PATRON SETTINGS (edit here) ============
-export const FOUNDING_SPOTS_LEFT = 2;
+export const FOUNDING_SPOTS_LEFT: number = 2;
 export const WHATSAPP_NUMBER = "27000000000"; // [WHATSAPP NUMBER] country code, no plus or spaces
 export const WHATSAPP_DISPLAY = "+27 00 000 0000";
 export const CELL_NUMBER = "+27 00 000 0000";
