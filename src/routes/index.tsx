@@ -476,11 +476,11 @@ function Apply() {
     e.preventDefault();
     const f = new FormData(e.currentTarget);
     const err: Record<string, string> = {};
-    if (!String(f.get("restaurant")).trim()) err.restaurant = "What's your restaurant called?";
-    if (!String(f.get("name")).trim()) err.name = "We'd love to know your name.";
-    if (!/^[+\d\s()-]{9,}$/.test(String(f.get("phone")))) err.phone = "Please add a number we can reach you on.";
-    if (!/^\S+@\S+\.\S+$/.test(String(f.get("email")))) err.email = "That email doesn't look quite right.";
-    if (!f.get("consent")) err.consent = "Please tick this so we can contact you.";
+    if (!String(f.get("restaurant")).trim()) err["restaurant"] = "What's your restaurant called?";
+    if (!String(f.get("name")).trim()) err["name"] = "We'd love to know your name.";
+    if (!/^[+\d\s()-]{9,}$/.test(String(f.get("phone")))) err["phone"] = "Please add a number we can reach you on.";
+    if (!/^\S+@\S+\.\S+$/.test(String(f.get("email")))) err["email"] = "That email doesn't look quite right.";
+    if (!f.get("consent")) err["consent"] = "Please tick this so we can contact you.";
     setErrors(err);
     if (Object.keys(err).length === 0) setDone(true);
   };
